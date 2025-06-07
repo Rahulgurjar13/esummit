@@ -142,10 +142,10 @@ const Navbar = () => {
 
         {/* Mobile Menu Dropdown */}
         <div className={`overflow-hidden transition-all duration-300 ease-in-out ${
-          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          isMenuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
         }`}>
           <div className="mt-3 pt-3 border-t border-gray-800">
-            <nav className="flex flex-col space-y-1">
+            <nav className="flex flex-col space-y-1 max-h-[400px] overflow-y-auto">
               {navLinks.map((item, index) => (
                 <Link 
                   key={item.path}
@@ -172,27 +172,7 @@ const Navbar = () => {
               ))}
             </nav>
             
-            {/* Mobile Menu Footer with Register Button */}
-            <div className="mt-4 pt-3 border-t border-gray-800">
-              <a
-                href="https://lu.ma/2risnlos"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center w-full py-3 sm:py-3.5 px-4 rounded-xl bg-white bg-opacity-10 hover:bg-opacity-20 transition-all duration-200 text-white font-medium text-sm sm:text-base min-h-[44px] touch-manipulation"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                <svg
-                  className="w-4 h-4 sm:w-5 sm:h-5 mr-2"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path d="M10 10C12.2091 10 14 8.20914 14 6C14 3.79086 12.2091 2 10 2C7.79086 2 6 3.79086 6 6C6 8.20914 7.79086 10 10 10Z" />
-                  <path d="M10 12C6.68629 12 4 14.6863 4 18H16C16 14.6863 13.3137 12 10 12Z" />
-                </svg>
-                Register for Event
-              </a>
-            </div>
+          
           </div>
         </div>
       </div>

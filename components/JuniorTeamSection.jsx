@@ -3,10 +3,8 @@ import React, { useState } from 'react';
 const JuniorTeamSection = () => {
   const teams = {
     tech: [
-      { id: 1, name: "Arjun Sharma", role: "Full Stack Developer", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Crafting elegant solutions with React, Node.js and modern web technologies." },
-      { id: 2, name: "Priya Nair", role: "Mobile Developer", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Specializing in cross-platform mobile applications with Flutter and React Native." },
-      { id: 3, name: "Rohan Patel", role: "Data Engineer", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Building robust data pipelines and analytics infrastructure." },
-      { id: 4, name: "Ananya Gupta", role: "UX/UI Designer", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Creating intuitive and beautiful user experiences focused on accessibility." }
+      { id: 1, name: "Rahul Gujjar", role: "Full Stack Developer", image: "https://blockchainweek-bu.vercel.app/images/rahul1.jpg ", bio: "Crafting elegant solutions with React, Node.js and modern web technologies." }
+     
     ],
     marketing: [
       { id: 5, name: "Vikram Singh", role: "Content Strategist", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Developing engaging content strategies across multiple platforms." },
@@ -155,9 +153,10 @@ const JuniorTeamSection = () => {
         </div>
 
         {/* Team Sections */}
-        <div className="mb-20">
+        <div className="mb-20 ">
           <TeamHeader heading="Technology" />
-          <TeamGrid teamMembers={teams.tech} />
+        <TeamGrid  teamMembers={teams.tech} />
+         
         </div>
 
         <div className="mb-20">
