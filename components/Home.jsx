@@ -21,6 +21,7 @@ const WelcomeScreen = ({ onComplete }) => {
     "Get Ready for an Amazing Journey!"
   ];
 
+
   useEffect(() => {
     const timer = setTimeout(() => {
       if (currentStep < welcomeMessages.length - 1) {
@@ -50,13 +51,13 @@ const WelcomeScreen = ({ onComplete }) => {
           <img
             src="https://www.bennett.edu.in/wp-content/uploads/2019/10/Bennett-University-logo1-.png"
             alt="Bennett University Logo"
-            className="w-32 sm:w-40 md:w-48 h-auto mx-auto opacity-90"
+            className="w-70  mx-auto "
           />
         </div>
 
         {/* Welcome Message */}
         <div className="mb-8 sm:mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 animate-pulse">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-red-600 mb-4 animate-pulse">
             {welcomeMessages[currentStep]}
           </h1>
           
@@ -97,21 +98,7 @@ const WelcomeScreen = ({ onComplete }) => {
         </div>
       </div>
 
-      {/* Floating particles */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-1 h-1 bg-red-500 rounded-full animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${3 + Math.random() * 2}s`
-            }}
-          />
-        ))}
-      </div>
+    
 
       <style jsx>{`
         @keyframes fade-in {
