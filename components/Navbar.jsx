@@ -90,7 +90,7 @@ const Navbar = () => {
           <Link to="/" className="relative flex-shrink-0">
             <img
               src="/images/SPARK E-CELL.png"
-              className="h-8 sm:h-9"
+              className="h-10 sm:h-12 w-auto"
               alt="spark Logo"
             />
           </Link>
@@ -101,10 +101,10 @@ const Navbar = () => {
               href="https://lu.ma/2risnlos"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center text-xs sm:text-sm px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-full border border-gray-700 hover:border-gray-500 hover:bg-gray-800 transition-all duration-200 whitespace-nowrap min-h-[36px] touch-manipulation"
+              className="flex items-center text-sm sm:text-base px-4 sm:px-5 py-2.5 sm:py-3 rounded-full border border-gray-700 hover:border-gray-500 hover:bg-gray-800 transition-all duration-200 whitespace-nowrap min-h-[42px] sm:min-h-[48px] touch-manipulation"
             >
               <svg
-                className="w-3.5 h-3.5 sm:w-4 sm:h-4 mr-1 sm:mr-1.5 flex-shrink-0"
+                className="w-4 h-4 sm:w-5 sm:h-5 mr-2 flex-shrink-0"
                 viewBox="0 0 20 20"
                 fill="currentColor"
                 xmlns="http://www.w3.org/2000/svg"
