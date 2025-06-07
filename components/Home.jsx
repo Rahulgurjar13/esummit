@@ -57,7 +57,7 @@ const WelcomeScreen = ({ onComplete }) => {
 
         {/* Welcome Message */}
         <div className="mb-8 sm:mb-12">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-red-600 mb-4 animate-pulse">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 animate-pulse">
             {welcomeMessages[currentStep]}
           </h1>
           
