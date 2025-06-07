@@ -96,7 +96,7 @@ const LandingPage = () => {
                   e.target.style.display = 'none';
                 }}
               />
-              <BennovateLogo className="w-[380px] h-[400px] mt-[-130px] ml-[-20px] " />
+              <BennovateLogo className="w-[370px] h-[400px] mt-[-130px] ml-[-5px] " />
             </div>
           </div>
 
