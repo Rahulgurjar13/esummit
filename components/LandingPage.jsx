@@ -86,7 +86,7 @@ const LandingPage = () => {
         <section className="flex flex-col items-center text-center px-4 sm:px-6 lg:px-8">
           {/* Hero Header */}
           <div className="flex justify-center mb-[-100px]">
-            <div className="rounded-lg p-2 flex flex-col sm:flex-row items-center gap-6 sm:gap-12">
+            <div className="rounded-lg p-2 flex flex-col sm:flex-row items-center gap-2 sm:gap-12 mt-[50px]">
               <img
                 src="https://www.bennett.edu.in/wp-content/uploads/2019/10/Bennett-University-logo1-.png"
                 alt="Bennett University Logo"
@@ -100,17 +100,17 @@ const LandingPage = () => {
             </div>
           </div>
 
-          <p className="text-white mb-2 text-sm sm:text-base mt-10">Presents Bennett University</p>
+          <p className="text-white mb-2 text-1xl sm:text-base mt-10">Presents Bennett University</p>
 
-          <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white mb-3 sm:mb-4  ">
+          <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-8xl font-bold text-white mb-3 sm:mb-4  ">
             E-SUMMIT'25
           </h1>
 
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-5xl text-white mb-6 sm:mb-8 font-light tracking-wider">
+          <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-5xl text-white mb-6 sm:mb-8 font-light tracking-wider">
             Innovation Meets Opportunity
           </h2>
 
-          <p className="text-white mb-6 sm:mb-8 text-sm sm:text-base">21st November - 23rd November</p>
+          <p className="text-white mb-6 sm:mb-8 text-1xl sm:text-base">21st November - 23rd November</p>
 
           {/* Hero Partners */}
           <div className="mt-6 sm:mt-8 flex justify-center items-center space-x-2">

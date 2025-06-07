@@ -19,17 +19,17 @@ const Homebutton = () => {
       <LandingPage setShowRegisterForm={setShowRegisterForm} />
 
       {/* AboutGES Section */}
-      <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+      <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 mt-[-120px]">
         <AboutGES />
       </section>
 
       {/* HubVisionaries Section */}
-      <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 mt-0 sm:mt-[-80px] lg:mt-[-120px]">
+      <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 mt-[-120px] sm:mt-[-200px] lg:mt-[-200px] ">
         <HubVisionaries />
       </section>
 
       {/* AboutGES2 Section */}
-      <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 mt-0 sm:mt-[-80px] lg:mt-[-120px]">
+      <section className="w-full max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 mt-[-120px] sm:mt-[-120px] lg:mt-[-120px]">
         <AboutGES2 />
       </section>
 
