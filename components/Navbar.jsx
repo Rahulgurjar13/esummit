@@ -32,9 +32,9 @@ const Navbar = () => {
             <Link to="/" className="relative group">
               <span className="absolute -inset-2 rounded-full opacity-0 group-hover:opacity-20 bg-white transition-opacity duration-300"></span>
               <img
-                src="/public/SPARK E-CELL.png"
+                src="/images/SPARK E-CELL.png"
                 className="h-12 w-20 relative transform transition-all duration-300 group-hover:scale-105 group-hover:brightness-110"
-                alt="IBF Logo"
+                alt="spark Logo"
               />
             </Link>
           </div>
@@ -89,9 +89,9 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <Link to="/" className="relative">
             <img
-              src="https://blockchainweek.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FIBF_logo.b265a8ae.png&w=256&q=75"
+              src="/images/SPARK E-CELL.png"
               className="h-8"
-              alt="IBF Logo"
+              alt="spark Logo"
             />
           </Link>
 
