@@ -148,10 +148,7 @@ const Footer = () => {
             <p className="text-white text-sm">
               © {new Date().getFullYear()} Spark E-cell. All rights reserved.
             </p>
-            <div className="flex items-center gap-6">
-              <a href="#" className="text-white hover:text-red-400 text-sm transition-colors">Privacy Policy</a>
-              <a href="#" className="text-white hover:text-red-400 text-sm transition-colors">Terms of Service</a>
-            </div>
+          
             <p className="text-white text-sm flex items-center gap-2">
               Made with 
               <span className="text-red-500 animate-pulse">❤</span>
