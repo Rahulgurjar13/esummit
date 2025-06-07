@@ -188,7 +188,7 @@ const ContactUs = () => {
       <header className="relative z-10 p-8">
         <div className="flex items-center justify-between">
           {/* Enhanced Logo/Brand */}
-          <a href="/home">
+          <a href="/events">
           <div className="flex items-center space-x-4">
             <div className="flex items-center space-x-3 bg-gradient-to-r from-gray-900/90 to-black/90 px-7 py-4 rounded-3xl border-2 border-red-600/60 backdrop-blur-2xl shadow-2xl shadow-red-600/15">
               <div className="p-3 bg-gradient-to-br from-red-600 to-red-700 rounded-xl shadow-xl">
@@ -204,7 +204,7 @@ const ContactUs = () => {
           </div>
           </a>
           {/* Enhanced Navigation Status */}
-          <a href="/home">
+          <a href="/events">
           <div className="flex items-center space-x-3 text-gray-300 bg-gradient-to-r from-gray-900/70 to-black/70 px-7 py-4 rounded-full border border-gray-700/60 backdrop-blur-2xl shadow-xl">
             <div className="w-2.5 h-2.5 bg-red-500 rounded-full animate-pulse shadow-md shadow-red-500/60"></div>
             <span className="text-sm font-medium">GO BACK</span>
