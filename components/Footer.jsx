@@ -146,7 +146,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-white text-sm">
-              © {new Date().getFullYear()} IBF. All rights reserved.
+              © {new Date().getFullYear()} Spark E-cell. All rights reserved.
             </p>
             <div className="flex items-center gap-6">
               <a href="#" className="text-white hover:text-red-400 text-sm transition-colors">Privacy Policy</a>
