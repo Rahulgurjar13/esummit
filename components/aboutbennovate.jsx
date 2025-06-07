@@ -23,19 +23,15 @@ const AboutGES = () => {
           </div>
                     
           <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-          To provide budding entrepreneurs an ideal platform to showcase their talent, Bennett
-University is coming up with its Third edition of the entrepreneurship summit this year,
-titled 'Bennovate 4.0'
-.
-The summit is being organized to recognize & reward the spark of entrepreneurship
-among young innovators as well as school students, to make them believe that they
-have the power to create the future they want to live in.
-The two-day event provides an avenue to bring together industry veterans to interact
-and draw attention to best practices and promote innovation.
-Bennovate will offer a key networking opportunity that provides students with a
-competitive environment to share ideas and foster a community of innovation and
-entrepreneurship. This is the ideal platform for startups from ideation stage to
-commercialized stage.
+          Bennett Hatchery, under the Centre for Innovation and Entrepreneurship, Bennett
+University is organizing its momentous Entrepreneurship summit “Bennovate” at the
+campus. The E-summit is being held with the support of StartinUP (UP govt) and WASME
+(World Association of Small and Medium Enterprises).The E-summit will be conducting a
+variety of entrepreneurship events catering to an array of audiences across all the verticals
+of entrepreneurship. The event will include Young start-ups which will be independent
+from school and colleges. School student innovators, Wannapreneurs, Government
+officials, Corporates, Industry Leaders, Investors, Academic Community will also be a part
+of the E-summit
           </p>
           
           {/* Optional: Add a CTA button */}

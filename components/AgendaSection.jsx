@@ -104,8 +104,8 @@ const AgendaSection = () => {
   const [expandedSession, setExpandedSession] = useState(null);
 
   const days = [
-    { id: 1, date: "21st November", day: "Day 1" },
-    { id: 2, date: "22nd November", day: "Day 2" },
+    { id: 1, date: "20st November", day: "Day 1" },
+    { id: 2, date: "21nd November", day: "Day 2" },
   ];
 
   const agenda = {

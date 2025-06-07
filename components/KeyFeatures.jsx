@@ -6,13 +6,13 @@ const KeyFeatures = () => {
 
   const features = [
     { 
-      number: 10, 
+      number: 20, 
       suffix: 'K+', 
       label: 'Attendees',
       description: 'Industry professionals from across the globe'
     },
     { 
-      number: 20, 
+      number: 25, 
       suffix: '+', 
       label: 'Startups',
       description: 'Innovative companies showcasing cutting-edge technology'

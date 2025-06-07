@@ -34,7 +34,8 @@ const Footer = () => {
 
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
-      <div className="w-full h-px bg-gradient-to-r from-transparent via-red-500 to-transparent mb-6"></div>
+        <div className="w-full h-px bg-gradient-to-r from-transparent via-red-500 to-transparent mb-6"></div>
+        
         {/* Top Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Section */}
@@ -42,14 +43,14 @@ const Footer = () => {
             <div className="flex items-center gap-2">
               <div className="relative">
                 <img
-                  src="https://blockchainweek.vercel.app/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FIBF_logo.b265a8ae.png&w=256&q=75"
+                  src="/images/SPARK E-CELL.png "
                   className="w-20"
                   alt="IBF Logo"
                 />
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed">
-              Indian Blockchain Fraternity at Bennett University fosters blockchain innovation through workshops, hackathons, and collaboration, empowering students in Web3 technologies.
+            E-Cell SPARK at Bennett University fuels entrepreneurial spirit through workshops, startup events, and collaborative initiatives, empowering students to innovate and lead in the startup ecosystem.
             </p>
             <div className="pt-4">
               <h4 className="text-white text-sm font-semibold mb-3">Join Our Newsletter</h4>
@@ -82,16 +83,37 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* E-Summit Address - Improved Organization */}
           <div>
-            <h3 className="text-white text-lg font-semibold mb-6">Resources</h3>
-            <ul className="space-y-4">
-              <li><span className="text-gray-400 hover:text-red-400 transition-colors flex items-center gap-2">→ Blockchain Guides</span></li>
-              <li><span className="text-gray-400 hover:text-red-400 transition-colors flex items-center gap-2">→ Hands-on Tutorials</span></li>
-              <li><span className="text-gray-400 hover:text-red-400 transition-colors flex items-center gap-2">→ Development Toolkits</span></li>
-              <li><span className="text-gray-400 hover:text-red-400 transition-colors flex items-center gap-2">→ Code Repositories</span></li>
-              <li><span className="text-gray-400 hover:text-red-400 transition-colors flex items-center gap-2">→ Smart Contract Templates</span></li>
-            </ul>
+            <h3 className="text-white text-lg font-semibold mb-6">E-Summit Address</h3>
+            <div className="space-y-4">
+              {/* Organization */}
+              <div>
+                <h4 className="text-red-400 text-sm font-medium mb-2">Organization</h4>
+                <p className="text-gray-400 text-sm">SPARK E-Cell, Bennett University</p>
+              </div>
+              
+              {/* Physical Address */}
+              <div>
+                <h4 className="text-red-400 text-sm font-medium mb-2">Address</h4>
+                <address className="text-gray-400 text-sm not-italic leading-relaxed">
+                  Plot Nos. 8-11, TechZone II<br />
+                  Greater Noida, Uttar Pradesh – 201310<br />
+                  India
+                </address>
+              </div>
+              
+              {/* Contact */}
+              <div>
+                <h4 className="text-red-400 text-sm font-medium mb-2">Email</h4>
+                <a 
+                  href="mailto:sparkecell@bennett.edu.in" 
+                  className="text-gray-400 hover:text-red-400 transition-colors text-sm underline decoration-red-400/40 hover:decoration-red-400"
+                >
+                  sparkecell@bennett.edu.in
+                </a>
+              </div>
+            </div>
           </div>
 
           {/* Developer Card */}

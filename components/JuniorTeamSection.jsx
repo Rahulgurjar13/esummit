@@ -81,7 +81,7 @@ const JuniorTeamSection = () => {
             </div>
             <div className="inline-flex items-center gap-2 bg-red-600/20 border border-red-500/30 px-3 py-1.5 rounded-full">
               <span className="text-red-400 font-medium text-xs">
-                {person.id <= 4 ? 'Developer' :
+                {person.id <= 4 ? 'Tech Head' :
                  person.id <= 8 ? 'Marketing' :
                  person.id <= 12 ? 'Operations' :
                  person.id <= 16 ? 'PR & Outreach' :

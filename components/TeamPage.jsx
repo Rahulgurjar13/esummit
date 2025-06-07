@@ -113,7 +113,7 @@ const TeamPage = () => {
           </div>
           <div className="flex items-center">
             <p className="text-xl text-gray-400 leading-relaxed">
-              Our team is our biggest strength! We are a passionate group of innovators dedicated to exploring blockchain technology and pushing the boundaries of decentralization.
+            Our team is our greatest asset! We are a dynamic group of entrepreneurial minds driven by passion, innovation, and the spirit of building a better tomorrow through startups and impactful ideas.
             </p>
           </div>
         </div>
@@ -129,7 +129,7 @@ const TeamPage = () => {
             Our <span className="text-red-600">Leadership</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Visionary leaders guiding our company toward innovation and excellence.
+          Visionary leaders steering our E-Cell with passion and purpose, driving innovation, entrepreneurship, and excellence on campus.
           </p>
           <div className="mt-3 flex justify-center">
             <div className="w-32 h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent rounded-full" />

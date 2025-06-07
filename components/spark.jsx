@@ -77,43 +77,38 @@ const AboutSpark = () => {
 
   const leadership = [
     {
-      name: "Priya Sharma",
-      role: "President & Co-Founder",
-      background: "Former McKinsey consultant, IIT Delhi alumna. Led 3 successful exits including a ₹100Cr acquisition.",
-      expertise: "Strategy, Scaling, Corporate Development",
-      achievements: "3 Successful Exits",
+      name: "DR. VINOD SHASTRI",
+      role: "Head, Centre for Innovation and Entrepreneurship",
+      background: "Business Strategy, Business Planning, Mentoring Ph.D. Symbiosis International University, 27+ Years of Exp. ",
+      
       image: "https://images.unsplash.com/photo-1494790108755-2616b332c913?w=400&h=400&fit=crop&crop=face"
     },
     {
-      name: "Arjun Mehta",
-      role: "Vice President - Operations",
-      background: "Ex-Google Product Manager, Stanford MBA. Built India's largest student entrepreneurship platform.",
-      expertise: "Product, Technology, Growth",
-      achievements: "10M+ Users Platform",
+      name: "MR. MANISH MATHUR",
+      role: "AGM, Bennett Hatchery Foundation",
+      background: "Mentoring, Monitoring and Evaluation, Networking Fundraising Support & Business Modelling MBA, (Pursuing Ph.D. in Entrepreneurship), 14+ Years of Exp.",
+     
       image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face"
     },
     {
-      name: "Dr. Kavita Raghavan",
-      role: "Faculty Advisor",
-      background: "Professor of Innovation Management, 20+ years industry experience with Tata Innovation Labs.",
-      expertise: "Innovation Strategy, Technology Transfer",
-      achievements: "50+ Research Papers",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face"
+      name: "DR. AJEETA SRIVASTAVA",
+      role: "Assistant Professor",
+      background: "Expertise in Entrepreneurship & Gender | 10+ years in Academia, Corporate, Govt & NGOs | Teaching Economics & Entrepreneurship | Econ Hons (DU), Ph.D. (JMI) "
+     
+      ,image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400&h=400&fit=crop&crop=face"
     },
     {
-      name: "Rohan Gupta",
-      role: "Head of Mentorship",
-      background: "Serial entrepreneur with 2 startups in edtech. IIM Bangalore alumnus with 10+ years in startup ecosystems.",
-      expertise: "Mentorship, Fundraising, Networking",
-      achievements: "Raised ₹50Cr+",
+      name: "MR. HARSHIT AGARWAL",
+      role: "Incubation Manager, Bennett Hatchery Foundation",
+      background: "Mentoring, Monitoring and Evaluation, Networking Fundraising Support & Business Modelling, Accelerator programs MBA Marketing & IB, 7 years exp. ",
+      
       image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
     },
     {
-      name: "Ananya Desai",
-      role: "Events Director",
-      background: "Former TEDx organizer, NIFT graduate. Scaled community events to 10,000+ attendees across India.",
-      expertise: "Event Management, Community Building",
-      achievements: "100+ Events Organized",
+      name: "MR. SHUBHAM AWASTHI",
+      role: "Asst. Manager, Bennett Hatchery Foundation",
+      background: "Data Analysis, Project Management, Networking, Regulatory Compliance, Stakeholder Management PGDM (MBA), MCA, 10+ Years Exp. ",
+      
       image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face"
     }
   ];
@@ -322,12 +317,10 @@ const AboutSpark = () => {
                 <div className="bg-gradient-to-r from-gray-800 to-gray-900 p-4 text-center border-b border-gray-700">
                   <h3 className="text-base font-bold text-white mb-1">{leader.name}</h3>
                   <p className="text-red-400 text-sm font-medium mb-2">{leader.role}</p>
-                  <div className="inline-block bg-red-500/10 border border-red-500/30 text-red-400 text-xs font-medium px-3 py-1 rounded-full">
-                    {leader.achievements}
-                  </div>
+                  
                 </div>
                                       
-                <div className="p-4 h-32 overflow-y-auto">
+                <div className="p-4 h-50 overflow-y-auto">
                   <p className="text-gray-400 text-sm leading-relaxed">
                     {leader.background}
                   </p>

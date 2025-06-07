@@ -110,7 +110,7 @@ const LandingPage = () => {
             Innovation Meets Opportunity
           </h2>
 
-          <p className="text-white mb-6 sm:mb-8 text-1xl sm:text-base">21st November - 23rd November</p>
+          <p className="text-white mb-6 sm:mb-8 text-1xl sm:text-base">20st November - 21rd November 2025</p>
 
           {/* Hero Partners */}
           <div className="mt-6 sm:mt-8 flex justify-center items-center space-x-2">

@@ -64,7 +64,7 @@ const Navbar = () => {
           </div>
           
           <a
-            href="https://lu.ma/2risnlos"
+            href="/home"
             target="_blank"
             rel="noopener noreferrer"
             className="relative group flex items-center px-5 py-2 rounded-full border border-gray-700 hover:border-white transition-all duration-300"
@@ -98,7 +98,7 @@ const Navbar = () => {
           {/* Mobile Register Button and Menu */}
           <div className="flex items-center space-x-2 sm:space-x-3">
             <a
-              href="https://lu.ma/2risnlos"
+              href="/home"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center text-sm sm:text-base px-4 sm:px-5 py-2.5 sm:py-3 rounded-full border border-gray-700 hover:border-gray-500 hover:bg-gray-800 transition-all duration-200 whitespace-nowrap min-h-[42px] sm:min-h-[48px] touch-manipulation"

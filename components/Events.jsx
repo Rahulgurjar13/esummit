@@ -67,7 +67,7 @@ const EventCard = ({ session, title, description, categories, icon: Icon, index 
         <div className="flex items-center justify-between text-xs text-gray-500">
           <div className="flex items-center gap-1.5 sm:gap-2">
             <Calendar size={12} className="text-red-500" />
-            <span>Nov 22-23</span>
+            <span>Nov 20-21</span>
           </div>
           <div className="flex items-center gap-1.5 sm:gap-2">
             <Award size={12} className="text-red-500" />
@@ -138,7 +138,7 @@ const Events = () => {
           <div className="inline-block mb-4">
             <span className="text-red-500 text-xs sm:text-sm font-semibold tracking-widest uppercase 
               border border-red-500/30 px-3 py-1.5 sm:px-4 sm:py-2 rounded-full">
-              Nov 22-23, 2025 
+              Nov 20-21, 2025 
             </span>
           </div>
           
