@@ -77,10 +77,16 @@ const Footer = () => {
             <h3 className="text-white text-lg font-semibold mb-6">Navigation</h3>
             <ul className="space-y-4">
               <li><span className="text-gray-400 hover:text-red-400 transition-colors flex items-center gap-2">→ Timeline</span></li>
-              <li><span className="text-gray-400 hover:text-red-400 transition-colors flex items-center gap-2">→ Workshop</span></li>
-              <li><span className="text-gray-400 hover:text-red-400 transition-colors flex items-center gap-2">→ Sponsors</span></li>
-              <li><span className="text-gray-400 hover:text-red-400 transition-colors flex items-center gap-2">→ About Us</span></li>
+              <a href="events"><li><span className="text-gray-400 hover:text-red-400 transition-colors flex items-center gap-2">→ Events</span></li></a>
+              <a href="Agenda"><li><span className="text-gray-400 hover:text-red-400 transition-colors flex items-center gap-2">→ Agenda</span></li></a>
+              <a href="sponsor"><li><span className="text-gray-400 hover:text-red-400 transition-colors flex items-center gap-2">→ sponsor</span></li></a>
+              <a href="spark"><li><span className="text-gray-400 hover:text-red-400 transition-colors flex items-center gap-2">→ Spark E-cell</span></li></a>
+              
+              <a href="contact-us"><li><span className="text-gray-400 hover:text-red-400 transition-colors flex items-center gap-2">→ Contact Us</span></li></a>
+              <a href="Speakers"><li><span className="text-gray-400 hover:text-red-400 transition-colors flex items-center gap-2">→ Speakers </span></li></a>
             </ul>
+            
+        
           </div>
 
           {/* E-Summit Address - Improved Organization */}
@@ -90,13 +96,13 @@ const Footer = () => {
               {/* Organization */}
               <div>
                 <h4 className="text-red-400 text-sm font-medium mb-2">Organization</h4>
-                <p className="text-gray-400 text-sm">SPARK E-Cell, Bennett University</p>
+                <p className="text-gray-400 text-sm font-bold">SPARK E-Cell, Bennett University</p>
               </div>
               
               {/* Physical Address */}
               <div>
                 <h4 className="text-red-400 text-sm font-medium mb-2">Address</h4>
-                <address className="text-gray-400 text-sm not-italic leading-relaxed">
+                <address className="text-gray-400 text-sm not-italic leading-relaxed font-bold">
                   Plot Nos. 8-11, TechZone II<br />
                   Greater Noida, Uttar Pradesh – 201310<br />
                   India
@@ -105,10 +111,10 @@ const Footer = () => {
               
               {/* Contact */}
               <div>
-                <h4 className="text-red-400 text-sm font-medium mb-2">Email</h4>
+                <h4 className="text-red-400 text-sm font-medium mb-2 ">Email</h4>
                 <a 
                   href="mailto:sparkecell@bennett.edu.in" 
-                  className="text-gray-400 hover:text-red-400 transition-colors text-sm underline decoration-red-400/40 hover:decoration-red-400"
+                  className="text-gray-400 hover:text-red-400 transition-colors text-sm underline decoration-red-400/40 hover:decoration-red-400 font-bold"
                 >
                   sparkecell@bennett.edu.in
                 </a>
