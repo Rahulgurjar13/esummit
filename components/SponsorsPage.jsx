@@ -9,7 +9,7 @@ const sponsorsData = [
     image: 'https://mcmscache.epapr.in/post_images/website_350/post_28927036/full.jpg',
   },
   {
-    name: 'Spotify',
+    name: 'Gaana',
     image: 'https://miro.medium.com/v2/resize:fit:768/1*k_wNq_cl2EJixZO9dSesew.jpeg',
   },
   {
