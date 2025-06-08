@@ -59,21 +59,21 @@ const PartnerCard = ({ partner }) => {
           <img
             src={partner.image}
             alt={partner.name}
-            className="relative h-24 w-auto max-w-48 object-contain filter brightness-105 
+            className="relative h-24  w-auto max-w-48 object-contain filter brightness-105 
               group-hover:brightness-110 transition-all duration-500 group-hover:scale-[1.02]"
           />
         </div>
 
         {/* Partner name */}
-        <h3 className="text-2xl font-semibold text-white/95 mb-3 group-hover:text-white 
-          transition-colors duration-500 tracking-tight font-light">
+        <h3 className="text-2xl mt-10 text-white/95 mb-3 group-hover:text-white 
+          transition-colors duration-500 tracking-wide font-light">
           {partner.name}
         </h3>
 
         {/* Premium accent line */}
-        <div className="w-16 h-[1px] bg-gradient-to-r from-gray-500/60 via-gray-400/80 to-gray-500/60 
+        <div className="w-32 h-[1px] bg-gradient-to-r from-red-600 via-red-400/80 to-red-600 
           group-hover:w-24 transition-all duration-700 group-hover:from-gray-400/80 
-          group-hover:via-gray-300/90 group-hover:to-gray-400/80" />
+          group-hover:via-gray-300/90 group-hover:to-gray-400/80 shadow-red-500 " />
       </div>
 
       {/* Subtle corner highlight */}
