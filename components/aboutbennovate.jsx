@@ -34,11 +34,7 @@ officials, Corporates, Industry Leaders, Investors, Academic Community will also
 of the E-summit
           </p>
           
-          {/* Optional: Add a CTA button */}
-          <button className="mt-8 px-8 py-3 bg-red-600 text-white rounded-lg
-            hover:bg-red-500 transition-colors duration-300 text-lg hover:shadow-lg hover:shadow-red-500/30">
-            Learn More
-          </button>
+        
         </div>
       </div>
     </div>

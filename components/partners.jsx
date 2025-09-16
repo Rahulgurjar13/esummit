@@ -7,7 +7,7 @@ const partnersData = [
     image: 'https://getvectorlogo.com/wp-content/uploads/2018/12/lakme-vector-logo.png',
   },
   {
-    name: 'REDTAPE',
+    name: 'RedTape',
     image: 'https://i.pinimg.com/736x/ba/bf/e4/babfe4cadba602b742f08cb2cc73cc2f.jpg',
   },
   {

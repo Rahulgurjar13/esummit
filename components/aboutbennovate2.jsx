@@ -25,10 +25,7 @@ const AboutGES2 = () => {
               Dedicated to driving innovation and nurturing entrepreneurial excellence, Bennovate inspires individuals to dream boldly, collaborate meaningfully, and shape the future of global business and innovation.
             </p>
                         
-            <button className="mt-8 px-8 py-3 bg-red-600 text-white rounded-lg
-              hover:bg-red-500 transition-colors duration-300 text-lg hover:shadow-lg hover:shadow-red-500/30">
-              Learn More
-            </button>
+           
           </div>
         </div>
       </div>

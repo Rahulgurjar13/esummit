@@ -7,17 +7,17 @@ const TeamPage = () => {
   const teamMembers = [
     {
       id: 1,
-      name: "Aditya Krishna Sharma",
-      role: "President",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=80&crop=faces&facepad=3",
-      bio: "Passionate leader with a vision for innovation and growth."
+      name: "Arni",
+      role: "Secretary",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=80&crop=faces&facepad=3",
+      bio: "Leading SPARK with a vision for innovation and entrepreneurship at Bennett University."
     },
     {
       id: 2,
-      name: "Indresh Agrawal",
-      role: "Vice President",
+      name: "Ansh",
+      role: "Joint Secretary",
       image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=80&crop=faces&facepad=3",
-      bio: "Strategic leader focused on sustainable growth and operational excellence."
+      bio: "Supporting the Secretary in driving SPARK’s mission for startup growth and excellence."
     }
   ];
 
@@ -105,7 +105,7 @@ const TeamPage = () => {
           <div className="transform transition-all duration-300 ease-in-out group">
             <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6 tracking-tight">
               Meet Our <br />
-              <span className="text-red-600">Visionary</span> Team
+              <span className="text-red-600">SPARK</span> Team
             </h1>
             <div className="mt-8 flex">
               <div className="w-24 h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent rounded-full" />
@@ -113,7 +113,7 @@ const TeamPage = () => {
           </div>
           <div className="flex items-center">
             <p className="text-xl text-gray-400 leading-relaxed">
-            Our team is our greatest asset! We are a dynamic group of entrepreneurial minds driven by passion, innovation, and the spirit of building a better tomorrow through startups and impactful ideas.
+              Our team at SPARK, Bennett University, is a dynamic group of entrepreneurial minds driven by passion, innovation, and the spirit of building a better tomorrow through startups and impactful ideas.
             </p>
           </div>
         </div>
@@ -129,7 +129,7 @@ const TeamPage = () => {
             Our <span className="text-red-600">Leadership</span>
           </h1>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-          Visionary leaders steering our E-Cell with passion and purpose, driving innovation, entrepreneurship, and excellence on campus.
+            Visionary Secretary and Joint Secretary steering SPARK E-Cell with passion and purpose, fostering innovation and entrepreneurship on campus.
           </p>
           <div className="mt-3 flex justify-center">
             <div className="w-32 h-1 bg-gradient-to-r from-transparent via-red-500 to-transparent rounded-full" />

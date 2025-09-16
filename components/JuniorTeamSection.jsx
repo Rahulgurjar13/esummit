@@ -2,47 +2,72 @@ import React, { useState } from 'react';
 
 const JuniorTeamSection = () => {
   const teams = {
-    tech: [
-      { id: 1, name: "Rahul Gujjar", role: "Full Stack Developer", image: "https://blockchainweek-bu.vercel.app/images/rahul1.jpg ", bio: "Crafting elegant solutions with React, Node.js and modern web technologies." }
-     
+    coreLeadership: [
+      
+      { id: 3, name: 'Sunidhee', role: 'Chief of Marketing', image: 'public/images/1726331401734 - Sunidhee Nibheria.jpg', bio: 'Overseeing marketing strategies and campaigns.' },
+      { id: 4, name: 'Tanishk', role: 'Chief of Marketing', image: 'https://images.unsplash.com/photo-1494790108755-2616b612b5bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Driving brand visibility and engagement.' },
+      { id: 5, name: 'Shruti', role: 'Chief of Operations', image: 'public/images/5acb7c8a-d4b2-4867-810c-047198ee1882 - Shruti Srivastava.jpeg', bio: 'Ensuring smooth operational execution.' },
+      { id: 6, name: 'Saransh', role: 'Chief of Startup Support', image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Supporting startup initiatives and growth.' },
     ],
-    marketing: [
-      { id: 5, name: "Vikram Singh", role: "Content Strategist", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Developing engaging content strategies across multiple platforms." },
-      { id: 6, name: "Neha Kapoor", role: "Social Media Manager", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Growing our brand presence through strategic social media campaigns." },
-      { id: 7, name: "Karan Malhotra", role: "SEO Specialist", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Optimizing our digital footprint for maximum visibility and engagement." },
-      { id: 8, name: "Diya Verma", role: "Growth Marketer", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Driving user acquisition through data-driven growth strategies." }
-    ],
-    management: [
-      { id: 9, name: "Aditya Rao", role: "Project Manager", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Ensuring projects are delivered on time, within scope and budget." },
-      { id: 10, name: "Shreya Iyer", role: "HR Specialist", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Building our culture and ensuring our team has everything they need to succeed." },
-      { id: 11, name: "Rahul Khanna", role: "Account Manager", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Managing client relationships and ensuring exceptional service delivery." },
-      { id: 12, name: "Pooja Desai", role: "Finance Analyst", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Providing financial insights to support strategic business decisions." }
-    ],
-    // Update other teams similarly with varied Unsplash URLs and &crop=faces&facepad=4
-    pr_outreach: [
-      { id: 13, name: "Sameer Joshi", role: "PR Coordinator", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Building relationships with media and community partners." },
-      { id: 14, name: "Tara Menon", role: "Event Planner", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Organizing impactful events to promote our mission." },
-      { id: 15, name: "Nikhil Reddy", role: "Outreach Specialist", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Expanding our network through strategic outreach initiatives." },
-      { id: 16, name: "Riya Chopra", role: "Communications Lead", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Crafting compelling narratives for our public presence." }
+    pr: [
+      { id: 7, name: 'Jaanvi', role: 'Head of PR', image: 'https://images.unsplash.com/photo-1522075469751-6603fb6861bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Leading public relations efforts.' },
+      { id: 8, name: 'Tanishk', role: 'PR Member', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Contributing to PR strategies.' },
+      { id: 9, name: 'Varun', role: 'PR Member', image: 'public/images/InShot_20250821_172926552 - Varun Jain.jpg', bio: 'Engaging with media and stakeholders.' },
+      { id: 10, name: 'Yedunandan', role: 'PR Member', image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Supporting PR outreach initiatives.' },
     ],
     design: [
-      { id: 17, name: "Ishita Bose", role: "Graphic Designer", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Creating visually stunning designs for our brand identity." },
-      { id: 18, name: "Aryan Thakur", role: "Motion Designer", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4https://images.unsplash.com/photo-1494790108755-2616b612b5bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Bringing our concepts to life through animated visuals." },
-      { id: 19, name: "Sana Kulkarni", role: "Web Designer", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Designing responsive and engaging web interfaces." },
-      { id: 20, name: "Kabir Mehra", role: "Brand Designer", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Developing consistent branding across all platforms." }
+      { id: 11, name: 'Dhruv', role: 'Head of Design', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Leading the design team for creative output.' },
+      { id: 12, name: 'Avni', role: 'Designer', image: 'https://images.unsplash.com/photo-1531123897727-8f129e1688ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Creating visually appealing designs.' },
+      { id: 13, name: 'Ayushika', role: 'Designer', image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Contributing to design projects.' },
+      { id: 14, name: 'Kunal', role: 'Designer', image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Crafting innovative design solutions.' },
+      { id: 15, name: 'Diwakar', role: 'Designer', image: 'https://images.unsplash.com/photo-1506794778202-26a994e6a4c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Enhancing visual branding.' },
     ],
     multimedia: [
-      { id: 21, name: "Meera Pillai", role: "Video Editor", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Producing high-quality video content for our audience." },
-      { id: 22, name: "Yash Dubey", role: "Photographer", image: "https://images.unsplash.com/photo-1494790108755-2616b612b5bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Capturing moments that tell our story visually." },
-      { id: 23, name: "Kavya Jain", role: "Audio Engineer", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Creating immersive audio experiences for our projects." },
-      { id: 24, name: "Siddharth Roy", role: "Multimedia Producer", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Overseeing multimedia content creation and delivery." }
+      { id: 16, name: 'Krish', role: 'Head of Multimedia', image: 'https://images.unsplash.com/photo-1517365830460-955ce3f6b1f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Leading multimedia content creation.' },
+      { id: 17, name: 'Krishna', role: 'Multimedia Member', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Producing engaging multimedia content.' },
+      { id: 18, name: 'Kartikeya', role: 'Multimedia Member', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Supporting multimedia projects.' },
+      { id: 19, name: 'Tanmay', role: 'Multimedia Member', image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Creating dynamic visual content.' },
     ],
-    research: [
-      { id: 25, name: "Aisha Siddiqui", role: "Blockchain Researcher", image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Exploring cutting-edge blockchain technologies and trends." },
-      { id: 26, name: "Omkar Yadav", role: "Data Analyst", image: "https://images.unsplash.com/photo-1494790108755-2616b612b5bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Analyzing data to inform our strategic decisions." },
-      { id: 27, name: "Tanvi Shah", role: "Market Researcher", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Studying market trends to guide our growth strategy." },
-      { id: 28, name: "Harsh Vardhan", role: "Tech Analyst", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4", bio: "Evaluating emerging technologies for implementation." }
-    ]
+    socialMedia: [
+      { id: 20, name: 'Akansha', role: 'Social Media Lead/Member', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Managing social media presence.' },
+      { id: 21, name: 'Akkshat', role: 'Social Media Lead/Member', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Driving social media engagement.' },
+    ],
+    content: [
+      { id: 22, name: 'Raini', role: 'Content Creator', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Crafting compelling content for SPARK.' },
+    ],
+    operations: [
+      { id: 23, name: 'Manish', role: 'Head of Operations', image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Overseeing operational workflows.' },
+      { id: 24, name: 'Arya', role: 'Operations Member', image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Supporting operational tasks.' },
+      { id: 25, name: 'Riddhima', role: 'Operations Member', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Ensuring smooth operations.' },
+      { id: 26, name: 'Nemi', role: 'Operations Member', image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Contributing to operational efficiency.' },
+      { id: 27, name: 'Aarushi', role: 'Operations Member', image: 'https://images.unsplash.com/photo-1517365830460-955ce3f6b1f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Supporting event and task coordination.' },
+      { id: 28, name: 'Lavanya', role: 'Operations Member', image: 'https://images.unsplash.com/photo-1506794778202-26a994e6a4c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Enhancing operational processes.' },
+      { id: 29, name: 'Ishaan', role: 'Operations Member', image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Assisting in operational planning.' },
+      { id: 30, name: 'Sumidson', role: 'Operations Member', image: 'public/images/DSC_0034 (1) - Sumidson.S. Henry.JPG', bio: 'Supporting team operations.' },
+    ],
+    events: [
+      { id: 31, name: 'Archit', role: 'Head of Events', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Leading event planning and execution.' },
+      { id: 32, name: 'Devanshi', role: 'Events Member', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Coordinating event logistics.' },
+      { id: 33, name: 'Sanchit', role: 'Events Member', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Supporting event organization.' },
+      { id: 34, name: 'Aditi', role: 'Events Member', image: 'https://images.unsplash.com/photo-1494790108755-2616b612b5bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Assisting in event planning.' },
+      { id: 35, name: 'Janwi', role: 'Events Member', image: 'https://images.unsplash.com/photo-1517365830460-955ce3f6b1f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Contributing to event success.' },
+    ],
+    tech: [
+      { id: 36, name: 'Rahul', role: 'Head of Tech', image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Leading technical development.' },
+      { id: 37, name: 'Avi', role: 'Tech Member', image: 'public/images/WhatsApp Image 2025-06-04 at 21.04.22 - Avi Srivastava.jpeg', bio: 'Developing technical solutions.' },
+      { id: 38, name: 'Vishu', role: 'Tech Member', image: 'public/images/WhatsApp Image 2025-08-21 at 21.20.27 - vishu.jpeg', bio: 'Supporting tech initiatives.' },
+      { id: 39, name: 'Anshul', role: 'Tech Member', image: 'https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Contributing to tech projects.' },
+    ],
+    finance: [
+      { id: 40, name: 'Ananya', role: 'Sponsorships Head', image: 'https://images.unsplash.com/photo-1506794778202-26a994e6a4c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Leading sponsorship and finance efforts.' },
+      { id: 41, name: 'Vijendra Pranay', role: 'Finance Member', image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Managing financial operations.' },
+      { id: 42, name: 'Divine', role: 'Finance Member', image: 'https://images.unsplash.com/photo-1522075469751-6603fb6861bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Supporting financial planning.' },
+      { id: 43, name: 'Himani', role: 'Finance Member', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Assisting in sponsorship coordination.' },
+      { id: 44, name: 'Janvi', role: 'Finance Member', image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Contributing to financial strategies.' },
+      { id: 45, name: 'Anushka', role: 'Finance Member', image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Supporting budget management.' },
+      { id: 46, name: 'Manthan', role: 'Finance Member', image: 'https://images.unsplash.com/photo-1494790108755-2616b612b5bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Assisting in financial operations.' },
+      { id: 47, name: 'Parth', role: 'Finance Member', image: 'https://images.unsplash.com/photo-1517365830460-955ce3f6b1f7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Contributing to sponsorship efforts.' },
+    ],
   };
 
   const MemberCard = ({ person }) => {
@@ -81,12 +106,15 @@ const JuniorTeamSection = () => {
             </div>
             <div className="inline-flex items-center gap-2 bg-red-600/20 border border-red-500/30 px-3 py-1.5 rounded-full">
               <span className="text-red-400 font-medium text-xs">
-                {person.id <= 4 ? 'Tech Head' :
-                 person.id <= 8 ? 'Marketing' :
-                 person.id <= 12 ? 'Operations' :
-                 person.id <= 16 ? 'PR & Outreach' :
-                 person.id <= 20 ? 'Design' :
-                 person.id <= 24 ? 'Multimedia' : 'Research'}
+                {person.id <= 6 ? 'Core Leadership' :
+                 person.id <= 10 ? 'PR' :
+                 person.id <= 15 ? 'Design' :
+                 person.id <= 19 ? 'Multimedia' :
+                 person.id <= 21 ? 'Social Media' :
+                 person.id <= 22 ? 'Content' :
+                 person.id <= 30 ? 'Operations' :
+                 person.id <= 35 ? 'Events' :
+                 person.id <= 39 ? 'Tech' : 'Finance'}
               </span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">{person.bio}</p>
@@ -128,7 +156,7 @@ const JuniorTeamSection = () => {
           className="absolute inset-0"
           style={{
             backgroundImage: `radial-gradient(circle at 2px 2px, red 1px, transparent 0)`,
-            backgroundSize: '40px 40px'
+            backgroundSize: '40px 40px',
           }}
         />
       </div>
@@ -140,38 +168,23 @@ const JuniorTeamSection = () => {
       <div className="relative max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 mb-6">
-            
-          </div>
           <h1 className="text-7xl font-bold text-white mb-6 tracking-tight">
-            Our <span className="text-red-600">Core</span> Teams
+            SPARK <span className="text-red-600">Teams</span>
           </h1>
-         
-          <div className="mt-8 flex justify-center">
-            
-          </div>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Meet the talented individuals driving innovation and entrepreneurship at Bennett University.
+          </p>
         </div>
 
         {/* Team Sections */}
-        <div className="mb-20 ">
-          <TeamHeader heading="Technology" />
-        <TeamGrid  teamMembers={teams.tech} />
-         
+        <div className="mb-20">
+          <TeamHeader heading="Core Leadership" />
+          <TeamGrid teamMembers={teams.coreLeadership} />
         </div>
 
         <div className="mb-20">
-          <TeamHeader heading="Marketing" />
-          <TeamGrid teamMembers={teams.marketing} />
-        </div>
-
-        <div className="mb-20">
-          <TeamHeader heading="Management" />
-          <TeamGrid teamMembers={teams.management} />
-        </div>
-
-        <div className="mb-20">
-          <TeamHeader heading="PR & Outreach" />
-          <TeamGrid teamMembers={teams.pr_outreach} />
+          <TeamHeader heading="Public Relations" />
+          <TeamGrid teamMembers={teams.pr} />
         </div>
 
         <div className="mb-20">
@@ -185,8 +198,33 @@ const JuniorTeamSection = () => {
         </div>
 
         <div className="mb-20">
-          <TeamHeader heading="Research" />
-          <TeamGrid teamMembers={teams.research} />
+          <TeamHeader heading="Social Media" />
+          <TeamGrid teamMembers={teams.socialMedia} />
+        </div>
+
+        <div className="mb-20">
+          <TeamHeader heading="Content" />
+          <TeamGrid teamMembers={teams.content} />
+        </div>
+
+        <div className="mb-20">
+          <TeamHeader heading="Operations" />
+          <TeamGrid teamMembers={teams.operations} />
+        </div>
+
+        <div className="mb-20">
+          <TeamHeader heading="Events" />
+          <TeamGrid teamMembers={teams.events} />
+        </div>
+
+        <div className="mb-20">
+          <TeamHeader heading="Tech" />
+          <TeamGrid teamMembers={teams.tech} />
+        </div>
+
+        <div className="mb-20">
+          <TeamHeader heading="Finance" />
+          <TeamGrid teamMembers={teams.finance} />
         </div>
       </div>
     </div>
