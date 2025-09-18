@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, Calendar, Users, Award, Sparkles } from 'lucide-react';
 
-const EventCard = ({ title, image, description, year }) => {
+const EventCard = ({ title, image, description, year, link }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -67,13 +67,18 @@ const EventCard = ({ title, image, description, year }) => {
         {/* Divider */}
         <div className="w-full h-px bg-gradient-to-r from-transparent via-red-500/30 to-transparent" />
 
-        {/* Button */}
-        <button className="w-full bg-red-600 hover:bg-red-500 text-white font-semibold 
-          py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-[1.02]
-          flex items-center justify-center gap-2 shadow-lg hover:shadow-red-500/30">
+        {/* Button with link */}
+        <a 
+          href={link} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="w-full block bg-red-600 hover:bg-red-500 text-white font-semibold 
+            py-3 px-4 rounded-lg transition-all duration-300 transform hover:scale-[1.02]
+            flex items-center justify-center gap-2 shadow-lg hover:shadow-red-500/30"
+        >
           <span>Explore Event</span>
           <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
-        </button>
+        </a>
       </div>
     </div>
   );
@@ -85,19 +90,22 @@ const StartupEvents = () => {
       title: "Bennovate 1.0",
       year: "2022",
       image: "https://www.bennett.edu.in/wp-content/uploads/2022/12/winners1.jpg",
-      description: "Bennett University's inaugural entrepreneurship summit brought together industry veterans and budding entrepreneurs for a transformative two-day event focused on innovation and networking."
+      description: "Bennett University's inaugural entrepreneurship summit brought together industry veterans and budding entrepreneurs for a transformative two-day event focused on innovation and networking.",
+      link: "https://www.bennett.edu.in/innovation-centre/bennovate-2022/"   // 🔗 Add event link here
     },
     {
       title: "Bennovate 2.0",
       year: "2023",
       image: "https://www.bennett.edu.in/wp-content/uploads/2023/12/Bennovate-2.0.jpg",
-      description: "The second edition featured enhanced collaboration between startups, investors, and industry leaders, supported by StartinUP and WASME for greater impact."
+      description: "The second edition featured enhanced collaboration between startups, investors, and industry leaders, supported by StartinUP and WASME for greater impact.",
+      link: "https://www.bennett.edu.in/innovation-centre/bennovate/"   // 🔗 Add event link here
     },
     {
       title: "Bennovate 3.0",
       year: "2024",
       image: "https://thekhaitanschool.org/wp-content/uploads/2024/11/Photo-from-Tanu-1.jpg",
-      description: "The latest summit expanded to include young entrepreneurs, academics, and seasoned professionals, creating a comprehensive platform for innovation and growth."
+      description: "The latest summit expanded to include young entrepreneurs, academics, and seasoned professionals, creating a comprehensive platform for innovation and growth.",
+      link: "https://www.bennett.edu.in/innovation-centre/bennovate-2024/"   // 🔗 Add event link here
     }
   ];
 
@@ -146,6 +154,7 @@ const StartupEvents = () => {
               year={event.year}
               image={event.image}
               description={event.description}
+              link={event.link}
             />
           ))}
         </div>
