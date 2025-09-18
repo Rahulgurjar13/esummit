@@ -9,7 +9,7 @@ const TeamPage = () => {
       id: 1,
       name: "Arni",
       role: "Secretary",
-      image: "/public/images/arni.jpg",
+      image: "images/arni.jpg",
       bio: "Leading SPARK with a vision for innovation and entrepreneurship at Bennett University."
     },
     {
