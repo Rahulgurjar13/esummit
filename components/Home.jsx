@@ -22,7 +22,7 @@ const WelcomeScreen = ({ onComplete }) => {
     },
     {
       main: "Where Founders Meet Funders",
-      sub: "November 15-16, 2025"
+      sub: "November 14-15, 2025"
     },
     {
       main: "Innovation Meets Opportunity",
