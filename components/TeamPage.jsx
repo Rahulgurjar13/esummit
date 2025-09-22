@@ -16,7 +16,7 @@ const TeamPage = () => {
       id: 2,
       name: "Ansh",
       role: "Joint Secretary",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=80&crop=faces&facepad=3",
+      image: "images/Ansh Singhal.JPG",
       bio: "Supporting the Secretary in driving SPARK’s mission for startup growth and excellence."
     }
   ];

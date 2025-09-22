@@ -10,10 +10,10 @@ const JuniorTeamSection = () => {
       { id: 6, name: 'Saransh', role: 'Chief of Startup Support', image: 'images/IMG_6915 - Saransh Jain.jpeg', bio: 'Supporting startup initiatives and growth.' },
     ],
     pr: [
-      { id: 7, name: 'Jaanvi', role: 'Head of PR', image: 'https://images.unsplash.com/photo-1522075469751-6603fb6861bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Leading public relations efforts.' },
+      { id: 7, name: 'Jaanvi', role: 'Head of PR', image: 'images/janwvi.jpeg' },
       { id: 8, name: 'Tanishk', role: 'PR Member', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Contributing to PR strategies.' },
       { id: 9, name: 'Varun', role: 'PR Member', image: 'images/InShot_20250821_172926552 - Varun Jain.jpg', bio: 'Engaging with media and stakeholders.' },
-      { id: 10, name: 'Yedunandan', role: 'PR Member', image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Supporting PR outreach initiatives.' },
+      { id: 10, name: 'Yedunandan', role: 'PR Member', image: 'images/yedvdun.jpeg', bio: 'Supporting PR outreach initiatives.' },
     ],
     design: [
       { id: 11, name: 'Dhruv', role: 'Head of Design', image: 'images/SAVE_20250211_155223 - Dhruv Mehta.jpg', bio: 'Leading the design team for creative output.' },
@@ -23,7 +23,7 @@ const JuniorTeamSection = () => {
       { id: 15, name: 'Diwakar', role: 'Designer', image: 'https://images.unsplash.com/photo-1506794778202-26a994e6a4c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Enhancing visual branding.' },
     ],
     multimedia: [
-      { id: 16, name: 'Krish', role: 'Head of Multimedia', image: 'images/IMG_20240330_153516 - Krish Garg.jpg', bio: 'Leading multimedia content creation.' },
+      { id: 16, name: 'Krish', role: 'Multimedia Member', image: 'images/IMG_20240330_153516 - Krish Garg.jpg', bio: 'Leading multimedia content creation.' },
       { id: 17, name: 'Krishna', role: 'Multimedia Member', image: 'images/IMG_9912 - Krishna Goyal.jpeg', bio: 'Producing engaging multimedia content.' },
       { id: 18, name: 'Kartikeya', role: 'Multimedia Member', image: 'images/IMG_20250821_150724-removebg-preview - Kartikeya Singh.jpg', bio: 'Supporting multimedia projects.' },
       { id: 19, name: 'Tanmay', role: 'Multimedia Member', image: 'images/IMG_0267 - YEDSTER.JPG', bio: 'Creating dynamic visual content.' },
@@ -43,10 +43,10 @@ const JuniorTeamSection = () => {
       { id: 27, name: 'Aarushi', role: 'Operations Member', image: 'images/Snapchat-385519136 - Arushi Chakraborty.jpg', bio: 'Supporting event and task coordination.' },
       { id: 28, name: 'Lavanya', role: 'Operations Member', image: 'https://images.unsplash.com/photo-1506794778202-26a994e6a4c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Enhancing operational processes.' },
       { id: 29, name: 'Ishaan', role: 'Operations Member', image: 'images/DSC00935 - Ishaan Sharma.JPG', bio: 'Assisting in operational planning.' },
-      { id: 30, name: 'Sumidson', role: 'Operations Member', image: 'images/DSC_0034 (1) - Sumidson.S. Henry.JPG', bio: 'Supporting team operations.' },
+      { id: 30, name: 'Sumidson', role: 'Operations Member', image: 'images/son.JPG', bio: 'Supporting team operations.' },
     ],
     events: [
-      { id: 31, name: 'Archit', role: 'Head of Events', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Leading event planning and execution.' },
+      { id: 31, name: 'Archit', role: 'Events Member', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Leading event planning and execution.' },
       { id: 32, name: 'Devanshi', role: 'Events Member', image: 'images/spark - Devanshi.jpg', bio: 'Coordinating event logistics.' },
       { id: 33, name: 'Sanchit', role: 'Events Member', image: 'images/sanchit.jpg', bio: 'Supporting event organization.' },
       { id: 34, name: 'Aditi', role: 'Events Member', image: '/images/Screenshot_20250821_153132_Gallery - Aditi Srivastava.jpg', bio: 'Assisting in event planning.' },
@@ -67,6 +67,7 @@ const JuniorTeamSection = () => {
       { id: 45, name: 'Anushka', role: 'Finance Member', image: 'images/IMG_3075 - Anushka Mishra.jpeg', bio: 'Supporting budget management.' },
       { id: 46, name: 'Manthan', role: 'Finance Member', image: 'images/IMG_20241127_192028_Original - MJforti.jpeg', bio: 'Assisting in financial operations.' },
       { id: 47, name: 'Parth', role: 'Finance Member', image: 'images/Screenshot_20250821_174943_Gallery - Parth Gaur.jpg', bio: 'Contributing to sponsorship efforts.' },
+       { id: 48, name: 'Pranay', role: 'Finance Member', image: 'images/pranay.jpeg', bio: 'Contributing to sponsorship efforts.' },
     ],
   };
 
