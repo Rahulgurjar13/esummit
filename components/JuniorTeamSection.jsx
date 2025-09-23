@@ -3,14 +3,13 @@ import React, { useState } from 'react';
 const JuniorTeamSection = () => {
   const teams = {
     coreLeadership: [
-      
       { id: 3, name: 'Sunidhee', role: 'Chief of Marketing', image: 'images/1726331401734 - Sunidhee Nibheria.jpg', bio: 'Overseeing marketing strategies and campaigns.' },
       { id: 4, name: 'Tanishk', role: 'Chief of Marketing', image: 'https://images.unsplash.com/photo-1494790108755-2616b612b5bb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Driving brand visibility and engagement.' },
       { id: 5, name: 'Shruti', role: 'Chief of Operations', image: 'images/shruti.jpeg', bio: 'Ensuring smooth operational execution.' },
       { id: 6, name: 'Saransh', role: 'Chief of Startup Support', image: 'images/IMG_6915 - Saransh Jain.jpeg', bio: 'Supporting startup initiatives and growth.' },
     ],
     pr: [
-      { id: 7, name: 'Jaanvi', role: 'PR Member', image: 'images/janwvi.jpeg' },
+      { id: 7, name: 'Jaanvi', role: 'PR Member', image: 'images/janwvi.jpeg', bio: 'Contributing to PR strategies and outreach.' },
       { id: 8, name: 'Tanishk', role: 'PR Member', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Contributing to PR strategies.' },
       { id: 9, name: 'Varun', role: 'Head of PR', image: 'images/InShot_20250821_172926552 - Varun Jain.jpg', bio: 'Engaging with media and stakeholders.' },
       { id: 10, name: 'Yedunandan', role: 'PR Member', image: 'images/yedvdun.jpeg', bio: 'Supporting PR outreach initiatives.' },
@@ -60,14 +59,14 @@ const JuniorTeamSection = () => {
     ],
     finance: [
       { id: 40, name: 'Ananya', role: 'Sponsorships Head', image: 'images/IMG_0515 - Ananya Mishra.jpeg', bio: 'Leading sponsorship and finance efforts.' },
-      { id: 41, name: 'Vijendra ', role: 'Finance Member', image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Managing financial operations.' },
+      { id: 41, name: 'Vijendra', role: 'Finance Member', image: 'https://images.unsplash.com/photo-1519345182560-3f2917c472ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Managing financial operations.' },
       { id: 42, name: 'Divine', role: 'Finance Member', image: 'images/divine.jpg', bio: 'Supporting financial planning.' },
       { id: 43, name: 'Himani', role: 'Finance Member', image: 'images/IMG_1301 - _himanii _.png', bio: 'Assisting in sponsorship coordination.' },
       { id: 44, name: 'Janvi', role: 'Finance Member', image: 'images/IMG_20250821_150432 - Janvi Pargai.jpg', bio: 'Contributing to financial strategies.' },
       { id: 45, name: 'Anushka', role: 'Finance Member', image: 'images/IMG_3075 - Anushka Mishra.jpeg', bio: 'Supporting budget management.' },
       { id: 46, name: 'Manthan', role: 'Finance Member', image: 'images/IMG_20241127_192028_Original - MJforti.jpeg', bio: 'Assisting in financial operations.' },
-      { id: 47, name: 'Parth', role: 'Finance Member', image: 'images/Screenshot 2025-09-23 at 3.41.38 PM.png', bio: 'Contributing to sponsorship efforts.' },
-       { id: 48, name: 'Pranay', role: 'Finance Member', image: 'images/pranay.jpeg', bio: 'Contributing to sponsorship efforts.' },
+      { id: 47, name: 'Parth', role: 'Finance Member', image: 'images/Screenshot 2025-09-23 at 3.41.38 PM.png', bio: 'Contributing to sponsorship efforts.' },
+      { id: 48, name: 'Pranay', role: 'Finance Member', image: 'images/pranay.jpeg', bio: 'Contributing to sponsorship efforts.' },
     ],
   };
 
