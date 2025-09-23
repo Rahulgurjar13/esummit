@@ -26,7 +26,7 @@ const JuniorTeamSection = () => {
       { id: 16, name: 'Krish', role: 'Multimedia Member', image: 'images/IMG_20240330_153516 - Krish Garg.jpg', bio: 'Leading multimedia content creation.' },
       { id: 17, name: 'Krishna', role: 'Multimedia Member', image: 'images/IMG_9912 - Krishna Goyal.jpeg', bio: 'Producing engaging multimedia content.' },
       { id: 18, name: 'Kartikeya', role: 'Multimedia Member', image: 'images/IMG_20250821_150724-removebg-preview - Kartikeya Singh.jpg', bio: 'Supporting multimedia projects.' },
-      { id: 19, name: 'Tanmay', role: 'Multimedia Member', image: 'images/IMG_0267 - YEDSTER.JPG', bio: 'Creating dynamic visual content.' },
+      { id: 19, name: 'Tanmay', role: 'Multimedia Member', image: 'images/tanmay jain.jpeg', bio: 'Creating dynamic visual content.' },
     ],
     socialMedia: [
       { id: 20, name: 'Akansha', role: 'Social Media Lead/Member', image: 'images/View recent photos.jpeg - Akansha Bhutani.png', bio: 'Managing social media presence.' },
@@ -49,7 +49,7 @@ const JuniorTeamSection = () => {
       { id: 31, name: 'Archit', role: 'Events Member', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Leading event planning and execution.' },
       { id: 32, name: 'Devanshi', role: 'Events Member', image: 'images/spark - Devanshi.jpg', bio: 'Coordinating event logistics.' },
       { id: 33, name: 'Sanchit', role: 'Events Member', image: 'images/sanchit.jpg', bio: 'Supporting event organization.' },
-      { id: 34, name: 'Aditi', role: 'Events Member', image: '/images/Screenshot_20250821_153132_Gallery - Aditi Srivastava.jpg', bio: 'Assisting in event planning.' },
+      { id: 34, name: 'Aditi', role: 'Events Member', image: 'images/aditi.jpeg', bio: 'Assisting in event planning.' },
       { id: 35, name: 'Janwi', role: 'Events Member', image: 'images/beep - Janwi singh.JPG', bio: 'Contributing to event success.' },
     ],
     tech: [
