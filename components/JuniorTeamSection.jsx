@@ -10,9 +10,9 @@ const JuniorTeamSection = () => {
       { id: 6, name: 'Saransh', role: 'Chief of Startup Support', image: 'images/IMG_6915 - Saransh Jain.jpeg', bio: 'Supporting startup initiatives and growth.' },
     ],
     pr: [
-      { id: 7, name: 'Jaanvi', role: 'Head of PR', image: 'images/janwvi.jpeg' },
+      { id: 7, name: 'Jaanvi', role: 'PR Member', image: 'images/janwvi.jpeg' },
       { id: 8, name: 'Tanishk', role: 'PR Member', image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Contributing to PR strategies.' },
-      { id: 9, name: 'Varun', role: 'PR Member', image: 'images/InShot_20250821_172926552 - Varun Jain.jpg', bio: 'Engaging with media and stakeholders.' },
+      { id: 9, name: 'Varun', role: 'Head of PR', image: 'images/InShot_20250821_172926552 - Varun Jain.jpg', bio: 'Engaging with media and stakeholders.' },
       { id: 10, name: 'Yedunandan', role: 'PR Member', image: 'images/yedvdun.jpeg', bio: 'Supporting PR outreach initiatives.' },
     ],
     design: [
