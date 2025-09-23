@@ -66,7 +66,7 @@ const JuniorTeamSection = () => {
       { id: 44, name: 'Janvi', role: 'Finance Member', image: 'images/IMG_20250821_150432 - Janvi Pargai.jpg', bio: 'Contributing to financial strategies.' },
       { id: 45, name: 'Anushka', role: 'Finance Member', image: 'images/IMG_3075 - Anushka Mishra.jpeg', bio: 'Supporting budget management.' },
       { id: 46, name: 'Manthan', role: 'Finance Member', image: 'images/IMG_20241127_192028_Original - MJforti.jpeg', bio: 'Assisting in financial operations.' },
-      { id: 47, name: 'Parth', role: 'Finance Member', image: 'images/Screenshot_20250821_174943_Gallery - Parth Gaur.jpg', bio: 'Contributing to sponsorship efforts.' },
+      { id: 47, name: 'Parth', role: 'Finance Member', image: 'images/Screenshot 2025-09-23 at 3.41.38 PM.png', bio: 'Contributing to sponsorship efforts.' },
        { id: 48, name: 'Pranay', role: 'Finance Member', image: 'images/pranay.jpeg', bio: 'Contributing to sponsorship efforts.' },
     ],
   };
