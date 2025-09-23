@@ -49,7 +49,7 @@ const JuniorTeamSection = () => {
       { id: 31, name: 'Archit', role: 'Events Member', image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&h=500&q=90&crop=faces&facepad=4', bio: 'Leading event planning and execution.' },
       { id: 32, name: 'Devanshi', role: 'Events Member', image: 'images/spark - Devanshi.jpg', bio: 'Coordinating event logistics.' },
       { id: 33, name: 'Sanchit', role: 'Events Member', image: 'images/sanchit.jpg', bio: 'Supporting event organization.' },
-      { id: 34, name: 'Aditi', role: 'Events Member', image: 'images/aditi 2.jpeg', bio: 'Assisting in event planning.' },
+      { id: 34, name: 'Aditi', role: 'Events Member', image: 'images/aditi_2.jpeg', bio: 'Assisting in event planning.' },
       { id: 35, name: 'Janwi', role: 'Events Member', image: 'images/beep - Janwi singh.JPG', bio: 'Contributing to event success.' },
     ],
     tech: [
