@@ -5,20 +5,21 @@ import Footer from './Footer';
 
 const TeamPage = () => {
   const teamMembers = [
-    {
+       {
       id: 1,
-      name: "Arni",
-      role: "Secretary",
-      image: "images/arni.jpg",
-      bio: "Leading SPARK with a vision for innovation and entrepreneurship at Bennett University."
+      name: "Ansh Singhal",
+      role: "Convenor",
+      image: "images/Ansh Singhal.JPG",
+      bio: ""
     },
     {
       id: 2,
-      name: "Ansh",
-      role: "Joint Secretary",
-      image: "images/Ansh Singhal.JPG",
-      bio: "Supporting the Secretary in driving SPARK’s mission for startup growth and excellence."
-    }
+      name: "Arni Lata",
+      role: "Co-Convenor",
+      image: "images/arni.jpg",
+      bio: ""
+    },
+ 
   ];
 
   const LeadershipCard = ({ person }) => {
