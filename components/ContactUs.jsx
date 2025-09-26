@@ -5,9 +5,11 @@ import {
   MapPin, 
   Send, 
   ArrowRight,
-  Zap
+  Zap,
+  CheckCircle,
+  AlertCircle,
+  Loader2
 } from 'lucide-react';
-import Footer from './Footer';
 
 const Button = ({ children, variant = "default", className = "", onClick, ...props }) => {
   const baseStyles = "px-6 py-3 rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black";
@@ -15,7 +17,6 @@ const Button = ({ children, variant = "default", className = "", onClick, ...pro
     default: "bg-red-600 text-white hover:bg-red-500 focus:ring-red-500 shadow-lg hover:shadow-red-500/25",
     outline: "border border-red-500/30 text-red-400 hover:bg-red-500/10 hover:border-red-500 focus:ring-red-500/50"
   };
-  
   return (
     <button 
       className={`${baseStyles} ${variants[variant]} ${className}`}
@@ -33,6 +34,11 @@ const ContactUs = () => {
     email: '',
     message: ''
   });
+  const [formStatus, setFormStatus] = useState('idle'); // idle, loading, success, error
+  const [submitMessage, setSubmitMessage] = useState('');
+
+  // Google Apps Script Web App URL
+  const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxlmsKQT6PsV7hzy4NBl5ppPjiWDTcBdzOS1fEknQ5wUVhWW9vdqQFS4t89jUy0b3EyVw/exec';
 
   const handleInputChange = (e) => {
     setFormData({
@@ -41,9 +47,103 @@ const ContactUs = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
+
+    // Basic validation
+    if (!formData.name || !formData.email || !formData.message) {
+      setFormStatus('error');
+      setSubmitMessage('Please fill in all fields');
+      return;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(formData.email)) {
+      setFormStatus('error');
+      setSubmitMessage('Please enter a valid email address');
+      return;
+    }
+
+    setFormStatus('loading');
+
+    try {
+      const submissionData = {
+        ...formData,
+        timestamp: new Date().toISOString(),
+        event: 'Bennovate 4.0'
+      };
+
+      console.log('Sending data to Google Apps Script:', submissionData); // Debug log
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors', // Bypass CORS restrictions
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(submissionData)
+      });
+
+      console.log('Fetch request completed:', response); // Debug log (limited with no-cors)
+      // Since no-cors prevents response access, assume success if no error
+      setFormStatus('success');
+      setSubmitMessage('Thank you! Your message has been sent successfully. We\'ll get back to you within 24 hours.');
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      });
+
+      setTimeout(() => {
+        setFormStatus('idle');
+        setSubmitMessage('');
+      }, 5000);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      console.log('Error details:', {
+        message: error.message,
+        stack: error.stack
+      });
+      setFormStatus('error');
+      setSubmitMessage('Something went wrong. Please try again or contact us directly.');
+      
+      setTimeout(() => {
+        setFormStatus('idle');
+        setSubmitMessage('');
+      }, 5000);
+    }
+  };
+
+  const StatusMessage = () => {
+    if (formStatus === 'idle') return null;
+    const statusConfig = {
+      loading: {
+        icon: <Loader2 className="w-5 h-5 animate-spin" />,
+        className: "bg-blue-600/20 border-blue-500/50 text-blue-400",
+        iconClassName: "text-blue-400"
+      },
+      success: {
+        icon: <CheckCircle className="w-5 h-5" />,
+        className: "bg-green-600/20 border-green-500/50 text-green-400",
+        iconClassName: "text-green-400"
+      },
+      error: {
+        icon: <AlertCircle className="w-5 h-5" />,
+        className: "bg-red-600/20 border-red-500/50 text-red-400",
+        iconClassName: "text-red-400"
+      }
+    };
+
+    const config = statusConfig[formStatus];
+
+    return (
+      <div className={`flex items-center space-x-3 p-4 rounded-xl border backdrop-blur-sm ${config.className} mb-4 animate-in fade-in duration-300`}>
+        <div className={config.iconClassName}>
+          {config.icon}
+        </div>
+        <p className="text-sm font-medium">{submitMessage}</p>
+      </div>
+    );
   };
 
   return (
@@ -51,7 +151,6 @@ const ContactUs = () => {
       {/* Enhanced Curved Background */}
       <div className="absolute inset-0">
         <svg className="w-full h-full" viewBox="0 0 1920 1080" fill="none" preserveAspectRatio="xMidYMid slice">
-          {/* Enhanced main flowing curves with better gradients */}
           <path 
             d="M0,150 Q380,50 760,200 Q1140,350 1520,150 Q1720,80 1920,180 L1920,0 L0,0 Z" 
             fill="url(#gradient1)" 
@@ -72,8 +171,6 @@ const ContactUs = () => {
             fill="url(#gradient4)" 
             opacity="0.3"
           />
-          
-          {/* Enhanced flowing lines with smoother curves */}
           <path 
             d="M0,280 Q240,180 480,320 Q720,460 960,280 Q1200,100 1440,280 Q1680,460 1920,320" 
             stroke="rgba(239, 68, 68, 0.9)" 
@@ -98,8 +195,6 @@ const ContactUs = () => {
             opacity="0.5"
             strokeLinecap="round"
           />
-          
-          {/* Enhanced accent curves */}
           <path 
             d="M150,80 Q550,30 950,180 Q1350,330 1750,120" 
             stroke="rgba(239, 68, 68, 0.4)" 
@@ -116,8 +211,6 @@ const ContactUs = () => {
             opacity="0.5"
             strokeLinecap="round"
           />
-          
-          {/* Enhanced floating particles with varied sizes and animations */}
           <circle cx="250" cy="200" r="6" fill="rgba(239, 68, 68, 0.9)" opacity="0.9">
             <animate attributeName="opacity" values="0.4;1;0.4" dur="2.5s" repeatCount="indefinite"/>
             <animate attributeName="r" values="4;8;4" dur="3s" repeatCount="indefinite"/>
@@ -141,8 +234,6 @@ const ContactUs = () => {
             <animate attributeName="opacity" values="0.5;1;0.5" dur="5s" repeatCount="indefinite"/>
             <animate attributeName="r" values="5;9;5" dur="4.5s" repeatCount="indefinite"/>
           </circle>
-          
-          {/* Enhanced gradients with richer colors */}
           <defs>
             <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
               <stop offset="0%" stopColor="rgba(239, 68, 68, 0.25)" />
@@ -169,10 +260,10 @@ const ContactUs = () => {
         </svg>
       </div>
 
-      {/* Enhanced gradient overlay */}
+      {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/40 via-transparent to-black/50"></div>
 
-      {/* Enhanced BENNOVATE Background Text with better positioning */}
+      {/* BENNOVATE Background Text */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
         <div className="text-center transform -translate-y-8">
           <h1 className="text-[18rem] font-black text-white opacity-[0.03] select-none leading-none tracking-wider mb-2">
@@ -184,42 +275,35 @@ const ContactUs = () => {
         </div>
       </div>
 
-      {/* Enhanced Header with improved styling */}
+      {/* Header */}
       <header className="relative z-10 p-8">
         <div className="flex items-center justify-between">
-          {/* Enhanced Logo/Brand */}
           <a href="/events">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-3 bg-gradient-to-r from-gray-900/90 to-black/90 px-7 py-4 rounded-3xl border-2 border-red-600/60 backdrop-blur-2xl shadow-2xl shadow-red-600/15">
-              <div className="p-3 bg-gradient-to-br from-red-600 to-red-700 rounded-xl shadow-xl">
-                <Zap className="w-6 h-6 text-white" />
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-3 bg-gradient-to-r from-gray-900/90 to-black/90 px-7 py-4 rounded-3xl border-2 border-red-600/60 backdrop-blur-2xl shadow-2xl shadow-red-600/15">
+                <div className="p-3 bg-gradient-to-br from-red-600 to-red-700 rounded-xl shadow-xl">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-xl font-bold text-white tracking-wide">BENNOVATE</h1>
+                  <div className="text-red-400 text-sm font-semibold tracking-wider">4.0</div>
+                </div>
               </div>
-              <div>
-                <h1 className="text-xl font-bold text-white tracking-wide">BENNOVATE</h1>
-                <div className="text-red-400 text-sm font-semibold tracking-wider">4.0</div>
-              </div>
-              
             </div>
-           
-          </div>
           </a>
-          {/* Enhanced Navigation Status */}
           <a href="/events">
-          <div className="flex items-center space-x-3 text-gray-300 bg-gradient-to-r from-gray-900/70 to-black/70 px-7 py-4 rounded-full border border-gray-700/60 backdrop-blur-2xl shadow-xl">
-            <div className="w-2.5 h-2.5 bg-red-500 rounded-full animate-pulse shadow-md shadow-red-500/60"></div>
-            <span className="text-sm font-medium">GO BACK</span>
-          </div>
+            <div className="flex items-center space-x-3 text-gray-300 bg-gradient-to-r from-gray-900/70 to-black/70 px-7 py-4 rounded-full border border-gray-700/60 backdrop-blur-2xl shadow-xl">
+              <div className="w-2.5 h-2.5 bg-red-500 rounded-full animate-pulse shadow-md shadow-red-500/60"></div>
+              <span className="text-sm font-medium">GO BACK</span>
+            </div>
           </a>
         </div>
-        
       </header>
-      
 
       {/* Main Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-8 py-4">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
-          
-          {/* Enhanced Left Side - Contact Info */}
+          {/* Left Side - Contact Info */}
           <div className="space-y-6">
             <div>
               <div className="mb-3">
@@ -236,9 +320,8 @@ const ContactUs = () => {
               </p>
             </div>
 
-            {/* Enhanced Contact Methods */}
+            {/* Contact Methods */}
             <div className="space-y-3">
-              {/* Enhanced Email */}
               <div className="group cursor-pointer">
                 <div className="flex items-center justify-between p-5 bg-gradient-to-r from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/60 hover:border-red-600/60 hover:bg-gray-900/70 transition-all duration-500 backdrop-blur-2xl shadow-2xl hover:shadow-3xl hover:shadow-red-600/8">
                   <div className="flex items-center space-x-4">
@@ -254,7 +337,6 @@ const ContactUs = () => {
                 </div>
               </div>
 
-              {/* Enhanced Phone */}
               <div className="group cursor-pointer">
                 <div className="flex items-center justify-between p-5 bg-gradient-to-r from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/60 hover:border-red-600/60 hover:bg-gray-900/70 transition-all duration-500 backdrop-blur-2xl shadow-2xl hover:shadow-3xl hover:shadow-red-600/8">
                   <div className="flex items-center space-x-4">
@@ -270,7 +352,6 @@ const ContactUs = () => {
                 </div>
               </div>
 
-              {/* Enhanced Location */}
               <div className="group cursor-pointer">
                 <div className="flex items-center justify-between p-5 bg-gradient-to-r from-gray-900/50 to-black/50 rounded-2xl border border-gray-800/60 hover:border-red-600/60 hover:bg-gray-900/70 transition-all duration-500 backdrop-blur-2xl shadow-2xl hover:shadow-3xl hover:shadow-red-600/8">
                   <div className="flex items-center space-x-4">
@@ -288,13 +369,10 @@ const ContactUs = () => {
             </div>
           </div>
 
-          {/* Enhanced Right Side - Contact Form with Better Definition */}
+          {/* Right Side - Contact Form */}
           <div className="relative">
-            {/* Enhanced Form Background - keeping original dark theme but more defined */}
             <div className="bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-3xl rounded-3xl p-8 border-2 border-gray-700/80 shadow-[0_25px_80px_rgba(0,0,0,0.6)] relative overflow-hidden">
-              {/* Subtle glow effect */}
               <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-red-600/5 to-transparent pointer-events-none"></div>
-              {/* Enhanced border glow */}
               <div className="absolute inset-0 rounded-3xl border border-red-600/30 pointer-events-none shadow-[inset_0_1px_0_rgba(255,255,255,0.1)]"></div>
               
               <div className="mb-6 relative z-10">
@@ -302,53 +380,83 @@ const ContactUs = () => {
                 <p className="text-gray-300 text-sm">We'll get back to you within 24 hours</p>
               </div>
               
-              <div className="space-y-5 relative z-10">
-                <div>
-                  <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    placeholder="Your Name"
-                    className="w-full px-5 py-4 bg-gray-800/90 border-2 border-gray-600/80 rounded-xl text-white placeholder-gray-400 focus:border-red-500/80 focus:outline-none focus:bg-gray-700/90 focus:shadow-2xl focus:shadow-red-500/20 transition-all duration-300 font-medium shadow-xl backdrop-blur-sm hover:border-gray-500/80"
-                  />
+              <StatusMessage />
+              
+              <form onSubmit={handleSubmit}>
+                <div className="space-y-5 relative z-10">
+                  <div>
+                    <input
+                      type="text"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      placeholder="Your Name"
+                      required
+                      disabled={formStatus === 'loading'}
+                      className="w-full px-5 py-4 bg-gray-800/90 border-2 border-gray-600/80 rounded-xl text-white placeholder-gray-400 focus:border-red-500/80 focus:outline-none focus:bg-gray-700/90 focus:shadow-2xl focus:shadow-red-500/20 transition-all duration-300 font-medium shadow-xl backdrop-blur-sm hover:border-gray-500/80 disabled:opacity-50 disabled:cursor-not-allowed"
+                    />
+                  </div>
+                  
+                  <div>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="your.email@example.com"
+                      required
+                      disabled={formStatus === 'loading'}
+                      className="w-full px-5 py-4 bg-gray-800/90 border-2 border-gray-600/80 rounded-xl text-white placeholder-gray-400 focus:border-red-500/80 focus:outline-none focus:bg-gray-700/90 focus:shadow-2xl focus:shadow-red-500/20 transition-all duration-300 font-medium shadow-xl backdrop-blur-sm hover:border-gray-500/80 disabled:opacity-50 disabled:cursor-not-allowed"
+                    />
+                  </div>
+                  
+                  <div>
+                    <textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      placeholder="Tell us about your project or questions about Bennovate 4.0..."
+                      rows={4}
+                      required
+                      disabled={formStatus === 'loading'}
+                      className="w-full px-5 py-4 bg-gray-800/90 border-2 border-gray-600/80 rounded-xl text-white placeholder-gray-400 focus:border-red-500/80 focus:outline-none focus:bg-gray-700/90 focus:shadow-2xl focus:shadow-red-500/20 transition-all duration-300 resize-none font-medium shadow-xl backdrop-blur-sm hover:border-gray-500/80 disabled:opacity-50 disabled:cursor-not-allowed"
+                    />
+                  </div>
+                  
+                  <button
+                    type="submit"
+                    disabled={formStatus === 'loading'}
+                    className="w-full py-4 px-8 bg-gradient-to-r from-red-600 to-red-700 text-white font-bold rounded-xl hover:from-red-700 hover:to-red-800 hover:scale-[1.02] active:scale-95 transition-all duration-300 shadow-2xl shadow-red-600/40 hover:shadow-[0_20px_40px_rgba(239,68,68,0.5)] flex items-center justify-center space-x-3 text-base border border-red-500/30 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
+                  >
+                    {formStatus === 'loading' ? (
+                      <>
+                        <Loader2 className="w-5 h-5 animate-spin" />
+                        <span>Sending...</span>
+                      </>
+                    ) : (
+                      <>
+                        <span>Send Message</span>
+                        <Send className="w-5 h-5" />
+                      </>
+                    )}
+                  </button>
                 </div>
-                
-                <div>
-                  <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    placeholder="your.email@example.com"
-                    className="w-full px-5 py-4 bg-gray-800/90 border-2 border-gray-600/80 rounded-xl text-white placeholder-gray-400 focus:border-red-500/80 focus:outline-none focus:bg-gray-700/90 focus:shadow-2xl focus:shadow-red-500/20 transition-all duration-300 font-medium shadow-xl backdrop-blur-sm hover:border-gray-500/80"
-                  />
-                </div>
-                
-                <div>
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    placeholder="Tell us about your project or questions about Bennovate 4.0..."
-                    rows={4}
-                    className="w-full px-5 py-4 bg-gray-800/90 border-2 border-gray-600/80 rounded-xl text-white placeholder-gray-400 focus:border-red-500/80 focus:outline-none focus:bg-gray-700/90 focus:shadow-2xl focus:shadow-red-500/20 transition-all duration-300 resize-none font-medium shadow-xl backdrop-blur-sm hover:border-gray-500/80"
-                  />
-                </div>
-                
-                <button
-                  onClick={handleSubmit}
-                  className="w-full py-4 px-8 bg-gradient-to-r from-red-600 to-red-700 text-white font-bold rounded-xl hover:from-red-700 hover:to-red-800 hover:scale-[1.02] active:scale-95 transition-all duration-300 shadow-2xl shadow-red-600/40 hover:shadow-[0_20px_40px_rgba(239,68,68,0.5)] flex items-center justify-center space-x-3 text-base border border-red-500/30"
-                >
-                  <span>Send Message</span>
-                  <Send className="w-5 h-5" />
-                </button>
-              </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
-      <Footer></Footer>
+
+      {/* Footer */}
+      <div className="relative z-10 mt-16">
+        <div className="bg-gradient-to-r from-gray-900/50 to-black/50 backdrop-blur-2xl border-t border-gray-800/60 px-8 py-6">
+          <div className="max-w-7xl mx-auto text-center">
+            <p className="text-gray-400 text-sm">
+              © 2024 Bennovate 4.0 - Bennett University. All rights reserved.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
