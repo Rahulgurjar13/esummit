@@ -51,7 +51,7 @@ const WelcomeScreen = ({ onComplete }) => {
           onComplete();
         }, 600);
       }
-    }, 1200); // Slightly longer display time for better readability
+    }, 400); // Slightly longer display time for better readability
 
     return () => clearTimeout(timer);
   }, [currentStep, onComplete, welcomeMessages.length]);

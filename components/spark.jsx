@@ -76,13 +76,7 @@ const AboutSpark = () => {
   ];
 
   const leadership = [
-    {
-      name: "DR. VINOD SHASTRI",
-      role: "Head, Centre for Innovation and Entrepreneurship",
-      background: "Business Strategy, Business Planning, Mentoring Ph.D. Symbiosis International University, 27+ Years of Exp. ",
-      
-      image: "https://images.unsplash.com/photo-1494790108755-2616b332c913?w=400&h=400&fit=crop&crop=face"
-    },
+   
     {
       name: "MR. MANISH MATHUR",
       role: "AGM, Bennett Hatchery Foundation",
