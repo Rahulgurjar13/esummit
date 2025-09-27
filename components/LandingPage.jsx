@@ -7,6 +7,7 @@ import Navbar from './Navbar'; // Adjust the import path as needed
 const VANTA_CONFIG = {
   el: null,
   THREE,
+  
   mouseControls: true,
   touchControls: true,
   gyroControls: false,
